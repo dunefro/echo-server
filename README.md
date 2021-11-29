@@ -21,7 +21,7 @@ SVC_PORT=$(kubectl get svc -l app.kubernetes.io/name=echo-server -ojsonpath='{.i
 # 'apple is the text that will be echoed'
 curl $SVC_IP:$SVC_PORT/apple
 ```
-If we pass multiple endpoints after a single `/` then `/` will be replaces by a space
+If we pass multiple endpoints after a single `/` then `/` will be replaced by a space.
 ```
 $ curl $SVC_IP:$SVC_PORT/apple/banana/papaya
 apple banana papaya
